@@ -2,8 +2,8 @@
 // make-the-ai-judge-feel-curious-20261122-2311
 // Writes one short text (1-280 Unicode code points) to /output/entry.txt.
 // Select a variant with the VARIANT env var or the first CLI argument
-// (1, 2 or 3). Default: 1 (the local A/B winner, "The Logbook on the
-// Third Step").
+// (1, 2 or 3). Default: 2 (resubmission: "The Phone Box on Mill Road",
+// the local A/B runner-up).
 //
 // Usage:
 //   node main.ts            -> writes variant 1
@@ -22,7 +22,7 @@ const VARIANTS = {
   3: "Every dawn, the garden gate at number nine swings open on its own. No wind, no hand. This morning a small brown dog sat on the step, waiting, as if it had been let in by someone who knew its name. The house has been empty for years.",
 };
 
-const DEFAULT_VARIANT = "1";
+const DEFAULT_VARIANT = "2";
 
 function main() {
   const selected = process.argv[2] ?? process.env.VARIANT ?? DEFAULT_VARIANT;
